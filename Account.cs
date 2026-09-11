@@ -15,7 +15,7 @@ public void Deposit(int amount)
   {
     if (amount > Balance)
     {
-      throw new InvalidOperationException("Insufficient funds");
+      throw new InvalidOperationException("Insufficient Money");
     }
     Balance -= amount;
   }
