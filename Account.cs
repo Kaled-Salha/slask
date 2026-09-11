@@ -6,4 +6,17 @@ public class Account
   
   public string AccountNumber { get; set; } = "";
 
+public void Deposit(int amount)
+  {
+    Balance += amount;
+  }
+
+  public void Withdraw(int amount)
+  {
+    if (amount > Balance)
+    {
+      throw new InvalidOperationException("Insufficient funds");
+    }
+    Balance -= amount;
+  }
 }
